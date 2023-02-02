@@ -29,7 +29,6 @@ export class BeerDetailComponent implements OnInit {
     // Get recipes from query text
     const recipesList = recipes.forEach((element: any) => {
       this.recipeService.getRecipesByQuery(element).subscribe((recipe: any) => {
-        console.log("1. ", recipe)
         Object.entries(recipe).forEach((entry: any) => {
           const [key, value] = entry;
           if(key === "hits") {

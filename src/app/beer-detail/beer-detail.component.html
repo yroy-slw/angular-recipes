@@ -10,12 +10,22 @@
 
 <div class="recipes">
   <h3>Quelques recettes qui pourrait vous intéresser:</h3>
-  <ul class="recipes-list">
-    <li class="recipe-item" *ngFor="let recipe of recipes">
-      <a href="{{ recipe.url }}">
-        <h3>{{ recipe.label }}</h3>
-        <img src="{{ recipe.image }}" alt="recipe.label">
-      </a>      
-    </li>
-  </ul>
+  <ng-container *ngIf="isLoading; else list">
+    <div class="recipes-skeleton">
+      <div *ngFor="let count of [].constructor(recipeCount)" class="recipes-skeleton__container animate">
+        <div class="recipes-skeleton__title"></div>
+        <div class="recipes-skeleton__image"></div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #list>
+    <ul class="recipes-list">
+      <li class="recipes-item" *ngFor="let recipe of recipes">
+        <a class="recipes-link" href="{{ recipe.url }}">
+          <h3>{{ recipe.label }}</h3>
+          <img src="{{ recipe.image }}" alt="recipe.label">
+        </a>      
+      </li>
+    </ul>
+  </ng-template>
 </div>

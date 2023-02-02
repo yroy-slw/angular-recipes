@@ -12,7 +12,10 @@
   <h3>Quelques recettes qui pourrait vous intéresser:</h3>
   <ul class="recipes-list">
     <li class="recipe-item" *ngFor="let recipe of recipes">
-      {{ recipe | json }}  
+      <a href="{{ recipe.url }}">
+        <h3>{{ recipe.label }}</h3>
+        <img src="{{ recipe.image }}" alt="recipe.label">
+      </a>      
     </li>
   </ul>
 </div>

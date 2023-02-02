@@ -1,0 +1,9 @@
+<ul class="beers-list">
+  <li *ngFor="let beer of beers">
+    <app-beer-item 
+      [beer]="beer" 
+      (favorites)="getFavorites($event)"
+      >
+    </app-beer-item>
+  </li>
+</ul>

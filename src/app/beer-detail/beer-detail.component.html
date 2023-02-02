@@ -1,0 +1,18 @@
+<div class="beer-detail" *ngIf="beer">
+  <button 
+    routerLink="/beers"
+    aria-current="page"
+    >Back to the list
+  </button>
+  <h2>{{ beer.name }}</h2>
+  <p>{{ beer.description }}</p>
+</div>
+
+<div class="recipes">
+  <h3>Quelques recettes qui pourrait vous intéresser:</h3>
+  <ul class="recipes-list">
+    <li class="recipe-item" *ngFor="let recipe of recipes">
+      {{ recipe | json }}  
+    </li>
+  </ul>
+</div>

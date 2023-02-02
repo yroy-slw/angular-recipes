@@ -1,0 +1,11 @@
+<div class="beer-item">
+  <span class="beer-header">
+    <h4>
+      <a routerLink="/beer/{{ beer.id }}">{{ beer.name }}</a>
+    </h4>
+    <button class="beer-favorite" (click)="toggleFavorite( beer.id )">
+      <img src="/assets/heart-{{ beer.favorite ? 'full' : 'empty' }}.png" alt="" />
+    </button>
+  </span>
+  <p>{{ beer.description }}</p>
+</div>

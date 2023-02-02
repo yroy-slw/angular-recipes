@@ -1,0 +1,37 @@
+.beer-item {
+  margin-bottom: 2.25rem;
+
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--base-color);
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    color: var(--light-color);
+    font-size: 0.875rem;
+    margin-bottom: 0.125rem;
+  }
+
+  .beer-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .beer-favorite {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    img {
+      max-width: 1.5rem;
+    }
+  }
+}
